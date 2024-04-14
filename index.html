@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 9</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Upcoming SpaceX Launches</h1>
+        <ul>
+            <li v-for="launch in launches" :key="launch.flight_number">
+                <h3>Name: {{ launch.name }}</h3>
+                Launch date (Local): {{ launch.date_local }}
+            </li>
+        </ul>
+    </div>
+    <script src="/utilities.js"></script>
+</body>
+</html>

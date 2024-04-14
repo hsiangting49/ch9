@@ -1,4 +1,19 @@
+const app = Vue.createApp({
+  //data, functions
+  data() {
+    return {
+      launches: [ ]
+    }
+  },
+  mounted() {
+    fetch('https://api.spacexdata.com/v4/launches/upcoming')
+      .then(res =>res.json() )
+      .then(data => this.launches = data)
+      .catch(err => console.log(err.message))
+  }
+})
 
+app.mount('#app')
 
 /*
   function getRandomName() {
